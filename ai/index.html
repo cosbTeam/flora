@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hideaki Hamada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        video {
+          transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    <div class="flex flex-col h-screen justify-between">
+        <header class="flex justify-between items-center p-8">
+            <div class="text-white text-3xl">Hideaki Hamada</div>
+            <nav>
+                <ul class="flex space-x-4 text-white text-lg">
+                    <li>Works</li>
+                    <li>Text</li>
+                    <li>Contact</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+        </header>
+        <main class="px-8 mb-8">
+            <ul class="text-white text-lg space-y-2">
+                <li><a href="#" onmouseover="changeBgImage()" onmouseout="resetBgImage()">くるり/人間を被る #1 (2023)</a></li>
+                <li><a href="#" onmouseenter="changeBgVideo()" onmouseleave="resetBgImage()">odol/森を抜ける (2024)</a></li>
+                <li>映像作品 A DISTANT SHORE 愛知公演 (2023)</li>
+                <li>imasae/夜寒 (2024)</li>
+                <li>odol/夜を越えて (2024)</li>
+                <li>再生産可能エネルギーソングブック (2023)</li>
+                <li>U-NEXT映画「ちょっとまじめな嘘つきバンドマン」(2023)</li>
+                <li>いつもはしっかり numbers/ハイティティラー (2023)</li>
+                <li>アルバムアートワーク てかける手/天国に一番近い島 (2022)</li>
+                <li>くるり/loveless (2022)</li>
+                <li>映画「かもめ食堂」新装版 (2023)</li>
+                <li>NTTドコモ/音楽の秋の日常篇/出会い篇 (2021)</li>
+                <li>radiko/その音楽は、 (2020)</li>
+                <li>ミルクホール/カモメ (2022)</li>
+                <li>Crispy Camera Club/僕らが生きた日の下で (2023)</li>
+            </ul>
+            <div class="text-white text-lg mt-4">More</div>
+        </main>
+    </div>
+    <script>
+        function changeBgImage() {
+            document.body.style.transition = "background 1s ease-in-out";
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
+        }
+
+        let video
+        function resetBgImage() {
+            video?.pause()
+            document.body.style.transition = "background 1s ease-in-out";
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')";
+            var video = document.querySelector('body > video');
+            if (video) {
+                video.style.opacity = 0
+                setTimeout(() => {
+                  document.body.removeChild(video);
+                      video = null
+                }, 1000);
+            }
+        }
+
+        function changeBgVideo() {
+            var video = document.createElement('video');
+            video.src = "https://videos.pexels.com/video-files/20325563/20325563-uhd_3840_2160_60fps.mp4";
+            video.autoplay = true;
+            video.loop = true;
+            video.muted = true;
+            video.style.position = "fixed";
+            video.style.right = "0";
+            video.style.bottom = "0";
+            video.style.minWidth = "100%";
+            video.style.minHeight = "100%";
+            video.style.width = "auto";
+            video.style.height = "auto";
+            video.style.zIndex = "-1";
+            video.style.backgroundSize = "cover";
+            video.crossOrigin = "anonymous"; // Add this line
+            video.style.opacity = 0
+            document.body.appendChild(video);
+            setTimeout(() => {
+                video.style.opacity = 1
+            }, 0);
+        }
+    </script>
+</body>
+</html>
