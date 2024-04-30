@@ -1,0 +1,16 @@
+@import "./common/index.scss";
+
+html {
+	--primary-color: #0076f6;
+	@media screen and (max-width: 960px) {
+		@import "./media_max_960/index.scss";
+		font-size: 0.2666667vw;
+		// 750设计稿尺寸/2 单位rem
+	}
+	* {
+		&:focus-visible,
+		&:focus {
+			outline: none;
+		}
+	}
+}
