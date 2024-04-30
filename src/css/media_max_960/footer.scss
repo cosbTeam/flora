@@ -1,0 +1,70 @@
+.zy-footer {
+	padding: 2.3vw;
+	.zy-footer-wrap {
+		width: 100%;
+	}
+	// 合作伙伴
+	.zy-footer-partner {
+		.zy-partner-title {
+			font-size: 10rem;
+		}
+		.zy-partner-container {
+			.zy-partner-logo {
+				height: 40px;
+				max-width: calc(33% - 8rem);
+			}
+		}
+	}
+	// 筑云联系信息
+
+	.zy-info {
+		display: inherit;
+		.zy-contact-title {
+			font-size: 12rem;
+		}
+		.zy-contact-info-item {
+			font-size: 10rem;
+		}
+		.zy-connect-wrap {
+			width: 100%;
+		}
+		// 座机
+		.zy-phone-wrap {
+			font-size: 12rem;
+			margin-top: 12rem;
+		}
+		.zy-phone-icon {
+			width: 15rem;
+			height: 15rem;
+			margin-right: 8rem;
+		}
+		// 公众号二维码
+		.zy-wechat {
+			justify-content: center;
+			font-size: 7rem;
+		}
+		.zy-wechat-qr {
+			width: 50rem;
+			height: 50rem;
+			margin-bottom: 5rem;
+		}
+	}
+	// ICP备案号
+	// 免责声明
+	.zy-footer-bottom {
+		flex-wrap: wrap;
+		#zy-icp {
+			width: 100%;
+			display: flex;
+			font-size: 8rem;
+			flex-direction: column;
+		}
+		.zy-disclaimer {
+			width: 100%;
+			font-size: 8rem;
+			a {
+				margin-left: unset;
+			}
+		}
+	}
+}

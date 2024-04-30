@@ -1,0 +1,17 @@
+// tab 导航栏active下部border
+.zy-tab-nav-b {
+	--border-width: 1px;
+	.nav-link {
+		font-size: 12rem;
+		&:nth-of-type(n + 2) {
+			margin-left: 20rem;
+		}
+	}
+}
+// tab 导航栏actives上部border
+.zy-tab-nav-t {
+	--border-width: 1px;
+	.nav-link {
+		font-size: 12rem;
+	}
+}
